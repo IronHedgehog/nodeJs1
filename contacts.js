@@ -12,7 +12,7 @@ function listContacts() {
     console.log("data", data);
   });
 }
-listContacts();
+
 function getContactById(contactId) {
   fs.readFile(contactPath, "utf-8", (err, data) => {
     if (err) {
