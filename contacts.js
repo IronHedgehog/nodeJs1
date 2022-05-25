@@ -9,7 +9,7 @@ function listContacts() {
     if (err) {
       console.error("err", err);
     }
-    console.log("data", data);
+    console.table(JSON.parse(data));
   });
 }
 
