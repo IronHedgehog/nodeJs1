@@ -17,23 +17,24 @@ program
 program.parse(process.argv);
 
 const argv = program.opts();
+console.log("argv", argv);
 
 function invokeAction({ action, id, name, email, phone }) {
   switch (action) {
     case "list":
-      // ...
+      listContacts();
       break;
 
     case "get":
-      // ... id
+      getContactById(id);
       break;
 
     case "add":
-      // ... name email phone
+      addContact(name, email, phone);
       break;
 
     case "remove":
-      // ... id
+      removeContact(id);
       break;
 
     default:

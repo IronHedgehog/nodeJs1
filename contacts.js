@@ -9,10 +9,10 @@ function listContacts() {
     if (err) {
       console.error("err", err);
     }
-    console.table("data", data);
+    console.log("data", data);
   });
 }
-
+listContacts();
 function getContactById(contactId) {
   fs.readFile(contactPath, "utf-8", (err, data) => {
     if (err) {
